@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Free online QR Code Generator. Create and download custom QR codes instantly.">
     <meta name="author" content="Harikiran">
+    <link rel="icon" type="image/x-icon" href="qr-code.png">
 
     <title>Free QR Generator</title>
     <style>
@@ -32,7 +33,7 @@
         img {
             max-width: 90%;
             height: auto;
-            margin: 20px 0;
+            margin: 0 0;
         }
 
         textarea {
@@ -85,27 +86,30 @@
 
         a {
             color: white;
-            font-size: 15px;
+            font-size: 12px;
             text-decoration: none;
-            border: 2px dashed white;
             padding: 5px;
             transition: background-color 0.8s;
         }
 
         a:hover {
-            background-color: #f9a71b;
-            color: white;
+            color: #f9a71b;
         }
 
         #downloadBtn {
             display: none;
         }
+
+        #logo {
+            margin: 0;
+            height: 400px;
+        }
     </style>
 </head>
 
 <body>
+    <img src="logo.png" alt="LoGo" id="logo">
 
-    <h2>QR GENERATOR</h2>
     <img src="" id="qr" />
     <button id="downloadBtn" onclick="downloadQr()">Download QR</button>
     <textarea id="textqr" placeholder="Enter Your URL/Text"></textarea>
