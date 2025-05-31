@@ -80,8 +80,8 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #f9a71b;
-            color: white;
+            color: rgb(85, 62, 201);
+            
         }
 
         a {
@@ -110,10 +110,10 @@
 <body>
     <img src="logo.png" alt="LoGo" id="logo">
 
-    <img src="" id="qr" />
-    <button id="downloadBtn" onclick="downloadQr()">Download QR</button>
     <textarea id="textqr" placeholder="Enter Your URL/Text"></textarea>
     <input type="submit" value="Generate QR" onclick="genQr()" />
+    <img src="" id="qr" />
+    <button id="downloadBtn" onclick="downloadQr()">Download QR</button>
 
     <h6><a href="https://harikiranap.netlify.app/"> Developed By HARIKIRAN</a></h6>
 
@@ -124,11 +124,11 @@
             var downloadBtn = document.getElementById("downloadBtn");
 
             if (text === "") {
-                alert("Please enter some text or URL.");
+                alert("Please enter valid text or URL.");
                 return;
             }
 
-            var api = "https://quickchart.io/qr?caption=BY HK&text=" + encodeURIComponent(text);
+            var api = "https://quickchart.io/qr?caption=BY QwikQR&text=" + encodeURIComponent(text);
             qrimg.crossOrigin = "anonymous";
             qrimg.src = api;
 
